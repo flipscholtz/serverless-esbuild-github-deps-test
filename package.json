@@ -1,0 +1,14 @@
+{
+  "name": "serverless-esbuild-github-deps-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.18.17",
+    "serverless": "^3.33.0",
+    "serverless-esbuild": "^1.46.0"
+  },
+  "dependencies": {
+    "@identity.com/casper-gatekeeper-lib": "^0.1.5"
+  }
+}

@@ -1,0 +1,27 @@
+service: github-dependency-test
+
+provider:
+  name: aws
+  runtime: 'nodejs16.x'
+
+functions:
+  test:
+    handler: testFunction/handler.js
+
+package:
+  individually: true
+
+plugins:
+  - serverless-esbuild
+  
+custom:
+  esbuild:
+    packager: yarn
+    bundle: true
+    exclude:
+      - aws-sdk
+    external:
+      - '@identity.com/casper-gatekeeper-lib' # imports a sub-dependency through 'github:' reference
+    target: node16
+    platform: node
+    concurrency: 10
