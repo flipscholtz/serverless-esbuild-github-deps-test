@@ -1,6 +1,7 @@
 ## serverless-esbuild: non-semver references excluded by yarn packager
 This demonstrates an issue with the yarn packager in serverless-esbuild,
 where github-referenced dependencies are not included in the packaged sls node_modules.
+https://github.com/floydspace/serverless-esbuild/issues/477
 
 ### Staps
 1. Run `yarn install`
